@@ -5,69 +5,7 @@ import styled from '@emotion/styled';
 import { Parallax } from 'react-scroll-parallax';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHome} from '@fortawesome/free-solid-svg-icons'
-// import ParallaxMousemove from 'react-parallax-mousemove';
 
-
-// scroll-mouse
-// const style = {
-//     outter: {
-//       background: 'radial-gradient(50% 150%, #6CD7E8 50%, #59C2D3 100%)',
-//       backgroundPosition: 'center',
-//       backgroundSize: 'cover',
-//       width:'100%',
-//       position: 'relative',
-//       overflow: 'hidden'
-//     },
-//     inner: {
-//       width:700,
-//       height:500,
-//       position: 'absolute',
-//       margin:'auto',
-//       top:0,
-//       left:0,
-//       right:0,
-//       bottom:0,
-//       textAlign:'center'
-//     },
-//     header: {
-//       fontFamily: 'Open Sans Condensed',
-//       textTransform: 'uppercase',
-//       color: 'white',
-//       textShadow: '0px 0px 2px #43AABA',
-//       fontSize: '50px',
-//       marginTop: '35px',
-//       fontWeight: 600
-//     },
-//     paragraph: {
-//       fontFamily: 'Roboto',
-//       fontSize: '20px',
-//       color: 'white',
-//       letterSpacing: '0.62px',
-//       lineHeight: '30px',
-//       fontWeight: 300
-//     },
-//     button: {
-//       fontFamily: 'Roboto',
-//       borderRadius: '100px',
-//       background: '#247B8A',
-//       textDecoration: 'none',
-//       color: 'white',
-//       textAlign: 'center',
-//       padding: '20px',
-//       marginTop: '40px',
-//       fontWeight: 100,
-//       display: 'block'
-//     },
-//     infoLayerStyle: {
-//       position: 'relative',
-//       marginTop: '-60px'
-//     },
-//     bgLayerStyle: {
-//       position: 'absolute',
-//       height: '100%',
-//       transform: 'translate(-15%, 17%)',
-//     }
-//   }
 
 const PresentationDesc=styled.div`
     padding:4em;
@@ -98,14 +36,13 @@ justify-content:center;
 align-items:center;
 border:none;
 background: #FBA43F;
-border-radius: 15px;
+border-radius: 18px;
 color:white;
-/* width:3rem; */
-/* height:1rem; */
 padding:.9rem 1.8rem;
-/* padding-left:1.3rem;
-padding-right:1.3rem; */
-
+transition:all 500ms ease-in-out;
+&:hover{
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
 `;
 
 const HomeScreen = () => {
@@ -140,19 +77,28 @@ const HomeScreen = () => {
                        
                     <Parallax className="custom-class" y={[-25, 25]} tagOuter="figure">
                         <PresentationDesc>
-                            <Description className="text-center nimate__animated animate__fadeInLeft animate__delay-1s">
+                            <Description className="text-center animate__animated animate__fadeInLeft animate__delay-1s">
                                 <h1>Dr.Indiveri<FontAwesomeIcon icon={faHome} color="#8BC9DC" style={{fontSize:"24px"}} size="xs"/></h1>
                             </Description>
                             <p className="text-center animate__animated animate__fadeInLeft animate__delay-2s">More than just a medic for you and your family</p>
                         </PresentationDesc>
                             
-                            <Col css={css`@media(max-width:1000px){justify-content:center !important;padding-left:0 !important;}`} md="12" id="btnCol" style={{alignContent:"center",justifyContent:"center",alignItems:"center",display:"flex",paddingBottom:'3rem',paddingTop:'10px',marginTop:'0'}} className="animate__animated animate__fadeIn">
-                            <ButtonOrange > <span> Start</span></ButtonOrange>
+                            <Col css={css`@media(max-width:1000px){justify-content:center !important;padding-left:0 !important;}`} md="12" id="btnCol" style={{alignContent:"center",justifyContent:"center",alignItems:"center",display:"flex",paddingBottom:'3rem',paddingTop:'10px',marginTop:'0'}} >
+                            <ButtonOrange className="text-center animate__animated animate__fadeIn animate__delay-3s"> <span> Start</span></ButtonOrange>
                             </Col>
                             {/* className="animate__animated animate__fadeInLeft animate__delay-3s " */}
-                           
+                            <Col>
+                                <div css={css`
+                                width: 250px;
+                                height: 250px;
+                                border-radius:100%;
+                                opacity:.5;
+                                background: #FCE9E9;`}>
+                          
+                              </div>
+                          </Col>
                         </Parallax>
-                        
+                     
                     </Col>
                   
                 <Col lg="6" style={{paddingRight:'0',paddingTop:'10px'}}>
@@ -163,7 +109,7 @@ const HomeScreen = () => {
                     </div>
                     </Col>
                 </Row>
-                
+               
                {/* <Row>
                    <Col css={css`height:100vh;width:100vw;padding:0;background-color:red;`}>
                    <ParallaxMousemove containerStyle={style.outter} fullHeight={true}>

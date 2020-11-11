@@ -2,7 +2,7 @@ import React,{Fragment,useContext,useState} from 'react';
 import {css } from '@emotion/core';
 import {useTheme} from 'emotion-theming';
 import Context from '../../store/context';
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import {
   Collapse,
@@ -18,22 +18,51 @@ import {
   DropdownItem,
   NavbarText,
   Row,
-  Col
+  Col,
+  Button
 } from 'reactstrap';
 // import Headroom from 'react-headroom';
 import './Heading.scss';
-import Button from 'reactstrap/lib/Button';
-// import { Row, Col } from 'reactstrap';
 
+const ButtonSignIn=styled.button`
+display:block;
+text-align:center;
+justify-content:center;
+align-items:center;
+background: #FFFFFF;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+border:none !important;
+border-radius: 18px;
+color: #323232 !important;
+padding:.8rem 1.1rem;
+transition:all 500ms ease-in-out;
+&:hover{
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+`;
 
-function BsNavLink(props){
-    return(
-    //   <ActiveLink activeClassName="active" route={route}>
-        <a className="nav-link port-navbar-link"></a>
-    //   </ActiveLink>
-        // <Link href={route}><a className="nav-link port-navbar-link">{title}</a></Link>
-    )
-  }
+const ButtonOrange=styled.button`
+display:block;
+text-align:center;
+justify-content:center;
+align-items:center;
+border:none;
+background: rgba(255, 205, 147, 0.58);
+border:none !important;
+border-radius: 18px;
+color: #E49437 !important;
+padding:.8rem 1.1rem;
+transition:all 500ms ease-in-out;
+    &:hover{
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+`;
+const DotSpan=styled.span`
+color:#8BC9DC;
+font-size:2rem ;
+font-weight:bold;
+`;
+
 
 
 const Heading = () => {
@@ -41,43 +70,17 @@ const Heading = () => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-    const {state,dispatch}=useContext(Context);
-    const theme=useTheme()
+    // const {state,dispatch}=useContext(Context);
+    // const theme=useTheme()
 
-    const EnlaceHome=styled.a`
-    color:"FFF";
-    text-align:center;
-    text-decoration:none;
-    padding-left:2.5rem;
-    &:hover{
-        cursor:pointer;
-        text-decoration:none;
-        color:${state.isDark?"white":"#323232"};
-    }
-`;
-    const DotSpan=styled.span`
-    color:#8BC9DC;
-    font-size:2rem ;
-    font-weight:bold;
-    `;
-
-    // lOGIN & LOGOUT
-    const Login=()=>{
-            console.log('login');
-        // <span onClick={auth0.login} className="nav-link port-navbar-link clickable">Login</span>
-    }
-    
-    const Logout=()=>{
-            console.log('logout');
-        // <span onClick={auth0.logout} className="nav-link port-navbar-link clickable">Logout</span>
-    }
-    
+ 
+  
 
 
     return ( 
     
         // <Headroom  style={{transition:'all .3s ease-in'}}>
-            <header
+        <header
             // id="head"
             // css={css`
             // padding:0;
@@ -85,42 +88,44 @@ const Heading = () => {
             // border:none;
             // background-color:transparent !important;
             // `}
-            >
-                <div>
-                    <Navbar className="port-navbar port-nav-base absolute blog" color="light" light expand="md">
-                        <NavbarBrand className="port-navbar-brand" href="/">Dr.Indiveri <DotSpan>.</DotSpan></NavbarBrand>
-                        <NavbarToggler onClick={toggle} />
+        >
+            <div>
+                <Navbar id="nave" className="navbarcomponent" color="light" light expand="md">
+                    <NavbarBrand className="port-navbar-brand logo" href="/">
+                        Dr.Indiveri <DotSpan>.</DotSpan>
+                    </NavbarBrand>
+                    <NavbarToggler onClick={toggle} />
                         <Collapse isOpen={isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-            <NavItem className="port-navbar-item blog" >
-            <NavLink className="nav-link port-navbar-link" href="#">Components</NavLink>
-            </NavItem>
-            <NavItem className="port-navbar-item">
-                <NavLink className="nav-link port-navbar-link" href="#">Components</NavLink>
-            
-            </NavItem>
-            <NavItem className="port-navbar-item">
-            <NavLink className="nav-link port-navbar-link" href="#">Components</NavLink>
+                    <Nav className="ml-auto" navbar>
+                        <NavItem className="port-navbar-item blog" >
+                            <NavLink className="nav-link port-navbar-link" href="#">About</NavLink>
+                        </NavItem>
 
-            </NavItem>
-            
-            <NavItem className="port-navbar-item">
-            <NavLink className="nav-link port-navbar-link" href="#">Components</NavLink>
-            </NavItem>
+                        <NavItem className="port-navbar-item">
+                            <NavLink className="nav-link port-navbar-link" href="#">Services</NavLink>
+                        </NavItem>
 
-            <NavLink className="nav-link port-navbar-link" href="#">
-                <Button outline color="warning" color="secondary">Sign In</Button>
-            </NavLink>
-            
-            <NavLink className="nav-link port-navbar-link" href="#">
-                <Button className="text-white" color="warning">Log In</Button>
-            </NavLink>
-           
+                        <NavItem className="port-navbar-item">
+                            <NavLink className="nav-link port-navbar-link" href="#">Blog</NavLink>
+                        </NavItem>
+
+                        <NavItem className="port-navbar-item">
+                            <NavLink className="nav-link port-navbar-link" href="#">Contacts</NavLink>
+                        </NavItem>
+
+                        <NavItem className="port-navbar-item">
+                                <ButtonSignIn outline color="warning" color="secondary">Sign In</ButtonSignIn>
+                        </NavItem>
+
+                        <NavItem className="port-navbar-item">
+                                <ButtonOrange Button className="text-white" color="warning">Log In</ButtonOrange>
+                        </NavItem>
+
                         </Nav>
-                        </Collapse>
-                    </Navbar>
-                </div>
-            </header>
+                            </Collapse>
+                </Navbar>
+            </div>
+        </header>
         // </Headroom>
      );
 }
