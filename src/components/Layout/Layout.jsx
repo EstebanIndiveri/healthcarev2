@@ -4,7 +4,7 @@ import React,{useContext, Fragment} from 'react';
 import {Global,css } from '@emotion/core';
 import {useTheme} from 'emotion-theming';
 import Context from '../../store/context';
-import Heading from '../Heading';
+import Heading from '../Heading/Heading';
 import {Helmet} from 'react-helmet';
 
 
@@ -54,6 +54,10 @@ const Layout=({children})=>{
          /* transition: ${state.isDark?`background-color 0s ease-in-out`:theme.transition.transition}; */
          /* transition: color ${state.isDark?"0.2s ease-in-out":"0.2s ease-in-out"} !important; */
        }
+       h1,h2,h3,h4,h5,h6{
+        font-family: 'Fira Sans', sans-serif !important;
+        
+      }
        body{
          background-color:${state.isDark?
          theme.dark.background:
