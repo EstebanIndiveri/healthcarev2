@@ -30,14 +30,14 @@ text-align:center;
 justify-content:center;
 align-items:center;
 background: #FFFFFF;
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
 border:none !important;
 border-radius: 18px;
 color: #323232 !important;
 padding:.8rem 1.1rem;
 transition:all 500ms ease-in-out;
 &:hover{
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.5);
 }
 `;
 
@@ -48,13 +48,14 @@ justify-content:center;
 align-items:center;
 border:none;
 background: rgba(255, 205, 147, 0.58);
+box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
 border:none !important;
 border-radius: 18px;
 color: #E49437 !important;
 padding:.8rem 1.1rem;
 transition:all 500ms ease-in-out;
     &:hover{
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.45);
     }
 `;
 const DotSpan=styled.span`

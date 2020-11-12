@@ -6,20 +6,39 @@ import { Parallax } from 'react-scroll-parallax';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHome} from '@fortawesome/free-solid-svg-icons'
 
+const BarraTitle=styled.div`
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+/* height:100px; */
+width:100%;
+padding-bottom:1rem;
+`;
 
 const PresentationDesc=styled.div`
     padding:4em;
-    padding-bottom:1rem;
+    padding-bottom:0;
     justify-content:center;
+    
+    p{
+        font-weight:lighter !important;
+        width:50%;
+        margin:0 auto;
+        padding-bottom:.4rem;
+    }
 `;
 const Description=styled.div`
-font-size:5rem;
+/* font-size:5rem; */
 font-weight:700;
 line-height:1.1;
+padding-bottom:0px;
 h1{
     font-size:6.07rem;
     padding:0;
     margin:0;
+    @media(max-width:1200px){
+        font-size:4.3rem;
+    }
 }
 @media(max-width:1000px){
         font-size:2.3rem;
@@ -40,6 +59,8 @@ border-radius: 18px;
 color:white;
 padding:.9rem 1.8rem;
 transition:all 500ms ease-in-out;
+/* margin-right:4rem; */
+
 &:hover{
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -78,7 +99,10 @@ const HomeScreen = () => {
                     <Parallax className="custom-class" y={[-25, 25]} tagOuter="figure">
                         <PresentationDesc>
                             <Description className="text-center animate__animated animate__fadeInLeft animate__delay-1s">
-                                <h1>Dr.Indiveri<FontAwesomeIcon icon={faHome} color="#8BC9DC" style={{fontSize:"24px"}} size="xs"/></h1>
+                                <h1 style={{padding:'0 !important',margin:'0 !important'}}>Dr.Indiveri<FontAwesomeIcon icon={faHome} color="#8BC9DC" style={{fontSize:"24px"}} size="xs"/></h1>
+                                <BarraTitle> 
+                                    <img src={require('../../imgs/uxkit/Rectangle7.png')} alt="" srcset=""/>
+                                </BarraTitle>
                             </Description>
                             <p className="text-center animate__animated animate__fadeInLeft animate__delay-2s">More than just a medic for you and your family</p>
                         </PresentationDesc>
@@ -89,13 +113,19 @@ const HomeScreen = () => {
                             {/* className="animate__animated animate__fadeInLeft animate__delay-3s " */}
                             <Col>
                                 <div css={css`
-                                width: 250px;
-                                height: 250px;
-                                border-radius:100%;
-                                opacity:.5;
-                                background: #FCE9E9;`}>
-                          
-                              </div>
+                                height: 300px;
+                                margin: 0 auto;
+                                width: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                `}>
+                                <img height="400px" width="400px" src={require('../../imgs/uxkit/Ellipse4.png')} alt="" srcset=""/>
+                                </div>
+                                <div style={{top:'-280px',left:'11.5rem' ,height: '274px',width: '200px',backgroundColor:'white', boxShadow:'0px 7px 26px 5px rgba(0, 0, 0, 0.30)',position:'relative', zIndex:'999',borderRadius:'20px'}}>
+                                
+
+                                </div>
                           </Col>
                         </Parallax>
                      
@@ -109,97 +139,7 @@ const HomeScreen = () => {
                     </div>
                     </Col>
                 </Row>
-               
-               {/* <Row>
-                   <Col css={css`height:100vh;width:100vw;padding:0;background-color:red;`}>
-                   <ParallaxMousemove containerStyle={style.outter} fullHeight={true}>
-          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
-              xFactor: 0.1,
-              yFactor: 0,
-              springSettings: {
-                stiffness: 50,
-                damping: 30
-              }
-            }}>
-            <img src={require('../../imgs/bg4.png')} alt="Parallax Layer"></img>
-          </ParallaxMousemove.Layer>
-          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
-              xFactor: 0.1,
-              yFactor: 0,
-              springSettings: {
-                stiffness: 50,
-                damping: 30
-              }
-            }}>
-            <img src={require('../../imgs/bg5.png')} alt="Parallax Layer"></img>
-          </ParallaxMousemove.Layer>
-          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
-              xFactor: 0.1,
-              yFactor: 0.025,
-              springSettings: {
-                stiffness: 50,
-                damping: 30
-              }
-            }}>
-            <img src={require('../../imgs/bg7.png')} alt="Parallax Layer"></img>
-          </ParallaxMousemove.Layer>
-          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
-              xFactor: 0.1,
-              yFactor: 0.05,
-              springSettings: {
-                stiffness: 50,
-                damping: 30
-              }
-            }}>
-            <img src={require('../../imgs/bg6.png')} alt="Parallax Layer"></img>
-          </ParallaxMousemove.Layer>
-          <div style={style.inner}>
-            <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle} config={{
-                xFactor: 0.1,
-                yFactor: 0,
-                springSettings: {
-                  stiffness: 50,
-                  damping: 30
-                }
-              }}>
-              <img src={require('../../imgs/bg1.png')} alt="Parallax Layer"></img>
-            </ParallaxMousemove.Layer>
-            <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle} config={{
-                xFactor: 0.08,
-                yFactor: 0,
-                springSettings: {
-                  stiffness: 50,
-                  damping: 30
-                }
-              }}>
-              <img src={require('../../imgs/bg2.png')} alt="Parallax Layer"></img>
-            </ParallaxMousemove.Layer>
-            <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle} config={{
-                xFactor: 0.05,
-                yFactor: 0,
-                springSettings: {
-                  stiffness: 50,
-                  damping: 30
-                }
-              }}>
-              <img src={require('../../imgs/bg3.png')} alt="Parallax Layer"></img>
-            </ParallaxMousemove.Layer>
-            <h1 style={style.header}>REACT-PARALLAX-MOUSEMOVE</h1>
-            <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle} config={{
-                xFactor: 0.01,
-                yFactor: 0,
-                springSettings: {
-                  stiffness: 50,
-                  damping: 30
-                }
-              }}>
-            <p style={style.paragraph}>A simple react component for creating a parallax effect connected to the mousemove event.</p>
-            </ParallaxMousemove.Layer>
-            <a href="https://www.npmjs.com/package/react-parallax-mousemove" style={style.button}>npm install react-parallax-mousemove --save</a>
-          </div>
-        </ParallaxMousemove>
-                   </Col>
-               </Row> */}
+            
             </Container>
         </div>
             </Fragment>
