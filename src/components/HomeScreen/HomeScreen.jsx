@@ -17,6 +17,7 @@ padding-bottom:1rem;
 
 const PresentationDesc=styled.div`
     padding:4em;
+    padding-top:3em;
     margin-top:8rem;
     padding-bottom:0;
     justify-content:center;
@@ -128,13 +129,23 @@ const HomeScreen = () => {
                                     <img height="27px" width="27px" src={require('../../imgs/uxkit/emojione_blue-heart.png')} alt=""/>
                                 </div>
                                 {/* second blue heart emojione_blue-heart-2*/}
-                                <div style={{position:'absolute',top:'10px',left:'95px'}}>
-                                    <img height="27px" width="27px" src={require('../../imgs/uxkit/emojione_blue-heart.png')} alt=""/>
+                                <div style={{position:'absolute',top:'1px',left:'430px'}}>
+                                    <img height="23px" width="23px" src={require('../../imgs/uxkit/emojione_blue-heart.png')} alt=""/>
                                 </div>
 
                                 {/* three pink heart */}
 
-                                <div></div>
+                                <div style={{position:'absolute',top:'180px',left:'510px'}}>
+                                    <img height="23px" width="23px" src={require('../../imgs/uxkit/emojione_blue-heart-1.png')} alt=""/>
+                                </div>
+
+                                <div style={{position:'absolute',top:'150px',left:'120px'}}>
+                                    <img height="100%" width="100%" src={require('../../imgs/uxkit/Ellipse6.png')} alt=""/>
+                                </div>
+
+                                <div style={{position:'absolute',top:'180px',left:'460px'}}>
+                                    <img height="100%" width="100%" src={require('../../imgs/uxkit/Ellipse6.png')} alt=""/>
+                                </div>
 
                                 <div className="" style={{top:'-250px',left:'9.2rem' ,height: '340px',width: '290px',backgroundColor:'white', boxShadow:'0px 7px 26px 5px rgba(0, 0, 0, 0.30)',position:'relative', zIndex:'999',borderRadius:'20px',}}>
                                     <div style={{background:'red',boxShadow:'0px 7px 26px 5px rgba(0, 0, 0, 0.30)' ,borderRadius:'100%', height:'50px',width:'50px',top:'20px',left:'30px',position:'relative',display:'flex'}}>
@@ -164,16 +175,48 @@ const HomeScreen = () => {
                         </Parallax>
                      
                     </Col>
-
+            
+                 
                   {/* segunda columna animate__animated animate__fadeInLeft animate__delay-3s */}
 
                 <Col lg="6" style={{paddingRight:'0',paddingTop:'10px'}}>
                     <div>
-                        <div css={css` background-position:center; height:80vh; background-image:url('../FamilyValueshappy.png');background-position:center;background-size:contain;background-repeat:no-repeat; @media(max-width:1000px){
+                        <div css={css` background-position:center; height:70vh; background-image:url('../FamilyValueshappy.png');background-position:center;background-size:contain;background-repeat:no-repeat; @media(max-width:1000px){
                             display:none;
                         }`}></div>
                     </div>
+
+                    <div style={{background:'#FFF2E2', width:'60px',height:'60px',top:'450px',position:'absolute',borderRadius:'20px'}}>
+                        <div style={{margin:'0 auto',justifyContent:'center',alignContent:'center',alignItems:'center',paddingTop:'15px'}} 
+                            css={
+                            css`
+                                transition:all 300ms ease-in-out;
+                                &:hover{
+                                    transform:scale(1.1) rotate(3deg) ;
+                                }
+                            `}
+
+                            >
+                            <img height="100%" width="100%" src={require('../../imgs/uxkit/pills2-1.png')} alt=""/>
+                        </div>
+                    </div>
+                    <div style={{width:'42%', left:'80px',marginTop:'15px',position:'absolute'}}>
+                        <p style={{alignContent:'center',textAlign:'left',fontSize: '13px'}}>Check your test <span style={{color:'#8BC9DC',fontWeight:'bold'}}>result</span> and discuss with your doctor</p>
+                    </div>
+                    <div style={{height:'25px',width:'25px',marginTop:'75px',left:'35px' ,position:'absolute'}}
+                        css={css`
+                        transition:all 300ms ease-in-out;
+                        &:hover{
+                            transform:translateY(2px)
+                        }    
+                        `
+                        }
+                    >
+                        <img height="100%" width="100%" src={require('../../imgs/uxkit/arrow.png')} alt=""/>
+
+                    </div>
                     </Col>
+                    
                 </Row>
             
             </Container>
