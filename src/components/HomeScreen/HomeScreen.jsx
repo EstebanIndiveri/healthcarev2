@@ -165,10 +165,18 @@ const HomeScreen = () => {
                                         `}>
                                         Dr.Daniel
                                     </div>
-                                    {/* corazones */}
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                </div>
+                                <div
+                                css={css`
+                                   height: 30vh;
+                                    width: 100%;
+                                    background-color: blue;
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 200px;
+                                
+                                `}
+                                >
 
                                 </div>
                           </Col>
@@ -207,12 +215,19 @@ const HomeScreen = () => {
                         css={css`
                         transition:all 300ms ease-in-out;
                         &:hover{
-                            transform:translateY(2px)
+                            transform:translateY(2px) scale(1.1);
+                            cursor:pointer;
                         }    
                         `
                         }
                     >
                         <img height="100%" width="100%" src={require('../../imgs/uxkit/arrow.png')} alt=""/>
+                    </div>
+                    <div css={css`
+                    height:100vh !important;
+                    background-color:red;
+                    margin-top:7rem;
+                    `}>
 
                     </div>
                     </Col>
