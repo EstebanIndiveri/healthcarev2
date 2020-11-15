@@ -5,6 +5,7 @@ import {css} from '@emotion/core';
 import './CardVisual.scss';
 import Row from 'reactstrap/lib/Row';
 import CircleBlue from '../../imgs/uxkit/cancelRecurso1.png';
+import Elipse from '../../imgs/uxkit/Ellipse4.png';
 
 const Carta= styled.div`
 height:340px;
@@ -31,6 +32,28 @@ const Circle=styled.img`
 height:40px;
 width:40px;
 `
+const Elipsis=styled.div`
+background-image:url(${Elipse});
+background-size:contain;
+height:400px;
+width:100%;
+background-position:center;
+background-repeat:no-repeat;
+z-index:-999;
+position:absolute;
+margin:0 !important;
+padding:0 !important;
+top: 390px;
+left: 0;
+
+@media(max-width:1015px){
+    top:480px;
+}
+
+@media(max-width:1000px){
+    display:none;
+}
+`;
 
 const CardVisual = () => {
 
@@ -38,8 +61,8 @@ const CardVisual = () => {
     return ( 
               
         <Fragment>
-           
-        
+                    <Elipsis></Elipsis>
+
                 <Carta >
                     <Row>
                         <Col xs="4">
@@ -50,10 +73,8 @@ const CardVisual = () => {
                         <Col xs="8">
                         <Title >Mr.sven</Title>                
                         </Col>
-
                     </Row>
                 </Carta>
-           
       </Fragment>
     );
 }
