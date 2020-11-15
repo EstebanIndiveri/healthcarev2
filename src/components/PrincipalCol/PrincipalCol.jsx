@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Parallax } from 'react-scroll-parallax';
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,10 +52,32 @@ background-repeat:no-repeat;
 width:100%;
 padding-bottom:1rem;
 `;
+const ButtonOrange=styled.button`
+display:block;
+text-align:center;
+justify-content:center;
+align-items:center;
+border:none;
+/* background: #FBA43F; */
+background: #ffcd93;
+margin:0 auto;
+
+
+border-radius: 18px;
+color:white;
+padding:.9rem 1.8rem;
+transition:all 500ms ease-in-out;
+/* margin-right:4rem; */
+
+&:hover{
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.25);
+}
+`;
 
 const PrincipalCol = () => {
     return ( 
-        <Parallax className="custom-class" y={[-15, 15]} tagOuter="figure">
+        // <Parallax className="custom-class" y={[-15, 15]} tagOuter="figure">        // </Parallax>
+        <Fragment>
         <PresentationDesc>
             <Description className="text-center animate__animated animate__fadeInLeft animate__delay-1s">
                 <h1 style={{padding:'0 !important',margin:'0 !important'}}>Dr.Indiveri<FontAwesomeIcon icon={faHome} color="#8BC9DC" style={{fontSize:"24px"}} size="xs"/></h1>
@@ -66,10 +88,12 @@ const PrincipalCol = () => {
             <p className="text-center animate__animated animate__fadeInLeft animate__delay-2s">More than just a medic for you and your family</p>
         </PresentationDesc>
           {/* /* aquí iria el card */}
+          <ButtonOrange className="text-center animate__animated animate__fadeIn animate__delay-3s"> <span> Start</span>
+                </ButtonOrange>
+            {/* <CardVisual/> */}
 
-            <CardVisual/>
 
-        </Parallax>
+        </Fragment>
      );
 }
  
