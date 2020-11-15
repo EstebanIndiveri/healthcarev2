@@ -103,7 +103,7 @@ const Heading = () => {
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                            <NavLink className="nav-link port-navbar-link" href="#">Services</NavLink>
+                            <NavLink className="nav-link port-navbar-link" href="#servicios">Services</NavLink>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
