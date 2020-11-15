@@ -6,6 +6,8 @@ import './CardVisual.scss';
 import Row from 'reactstrap/lib/Row';
 import CircleBlue from '../../imgs/uxkit/cancelRecurso1.png';
 import Elipse from '../../imgs/uxkit/todojunto.png';
+import { Parallax } from 'react-scroll-parallax';
+
 
 const Carta= styled.div`
 height:340px;
@@ -61,7 +63,9 @@ const CardVisual = () => {
     return ( 
               
         <Fragment>
+
                     <Elipsis></Elipsis>
+                    <Parallax className="custom-class" y={[-15, 80]} tagOuter="figure">
 
                 <Carta >
                     <Row>
@@ -75,6 +79,7 @@ const CardVisual = () => {
                         </Col>
                     </Row>
                 </Carta>
+        </Parallax>
       </Fragment>
     );
 }

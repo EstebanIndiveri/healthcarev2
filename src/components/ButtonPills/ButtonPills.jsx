@@ -25,10 +25,15 @@ const ButtonPills = () => {
 
 
     return ( 
-        <div>
-               
+        <div
+        css={css`
+                        @media(max-width:1000px){
+                            display:none;
+                        }
+                    `}
+        >
 
-                    <div style={{background:'#FFF2E2', width:'60px',height:'60px',top:'450px',position:'absolute',borderRadius:'20px'}}>
+                    <div  style={{background:'#FFF2E2', width:'60px',height:'60px',top:'450px',position:'absolute',borderRadius:'20px'}}>
                         <div style={{margin:'0 auto',justifyContent:'center',alignContent:'center',alignItems:'center',paddingTop:'15px'}} 
                             css={
                             css`

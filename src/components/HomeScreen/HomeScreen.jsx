@@ -7,6 +7,7 @@ import SintaxDes from '../SintaxDes';
 import CardVisual from '../CardVisual/CardVisual';
 import PrincipalCol from '../PrincipalCol';
 import ButtonPills from '../ButtonPills/ButtonPills';
+import DescriptionText from '../DescriptionText/DescriptionText';
 
 const Clear=styled.div`
 @media(max-width:525px){
@@ -53,10 +54,7 @@ const HomeScreen = () => {
                             
                         </Col>
                         
-                            
-                       
                     {/* segunda columna animate__animated animate__fadeInLeft animate__delay-3s */}
-
                         <Col lg="6" style={{paddingRight:'0',paddingTop:'10px'}}>
                             <div>
                                 <div css={css` background-position:center; height:70vh; background-image:url('../FamilyValueshappy.png');background-position:center;background-size:contain;background-repeat:no-repeat; @media(max-width:1000px){
@@ -65,7 +63,8 @@ const HomeScreen = () => {
                             </div>
                                 <ButtonPills/>
                             {/* Description text */}
-
+                           
+                           <DescriptionText/> 
                         </Col>
                         
                     </Row>

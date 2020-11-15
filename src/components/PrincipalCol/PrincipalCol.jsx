@@ -76,8 +76,9 @@ transition:all 500ms ease-in-out;
 
 const PrincipalCol = () => {
     return ( 
-        // <Parallax className="custom-class" y={[-15, 15]} tagOuter="figure">        // </Parallax>
         <Fragment>
+        {/* <Parallax className="custom-class" y={[-25, 25]} tagOuter="figure"> */}
+
         <PresentationDesc>
             <Description className="text-center animate__animated animate__fadeInLeft animate__delay-1s">
                 <h1 style={{padding:'0 !important',margin:'0 !important'}}>Dr.Indiveri<FontAwesomeIcon icon={faHome} color="#8BC9DC" style={{fontSize:"24px"}} size="xs"/></h1>
@@ -91,7 +92,7 @@ const PrincipalCol = () => {
           <ButtonOrange className="text-center animate__animated animate__fadeIn animate__delay-3s"> <span> Start</span>
                 </ButtonOrange>
             {/* <CardVisual/> */}
-
+            {/* </Parallax> */}
 
         </Fragment>
      );
