@@ -17,6 +17,9 @@ const DescriptionText = () => {
         border-radius:10px;
         margin-top:7rem;
         margin-right:1rem;
+        @media(max-width:991px){
+            margin-top:0px !important;
+        }
         `}>
             <div>
                 <PersonalDescription/>

@@ -11,9 +11,9 @@ const ServicesOffered = () => {
     <div id="start" class="hero animate__animated animate__bounce animate__fadeIn">
         <div class="contenedor">
             <div class="contenido">
-                <h1 class="titulo" style={{color:'#FCE9E9'}}>Safe Delivery</h1>
+                <h1 class="titulo" style={{color:'#FCE9E9'}}>Servicio Médico</h1>
                 {/* <p class="subtitulo" style={{color:'#8BC9DC'}}>Your favourites products ready 4 you</p> */}
-                <p class="subtitulo" style={{color:'#8BC9DC'}}>Your favourites products ready 4 you</p>
+                <p class="subtitulo" style={{color:'#8BC9DC'}}>Manten a tu familia saludable</p>
 
             </div>
         </div>
@@ -31,7 +31,7 @@ const ServicesOffered = () => {
     <div class="servicio">
         <h2>Centros de salud</h2>
         <FontAwesomeIcon icon={faHospital} color="#8BC9DC" style={{fontSize:"32px"}} size="lg"/>
-        <p className="mt-3">Atención medica en CEOM <br/>Consultorios de la Recta<br/>Consultorio privado Sucre 5 </p>
+        <p className="mt-3">Atención medica en CEOM <br/>Consultorios de la Recta<br/>Consultorio privado Sucre</p>
     </div>
 
     <div class="servicio">

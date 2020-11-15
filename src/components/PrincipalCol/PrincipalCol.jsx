@@ -69,9 +69,16 @@ padding:.9rem 1.8rem;
 transition:all 500ms ease-in-out;
 /* margin-right:4rem; */
 
+a{
+color:white;
+text-decoration:none;
+}
 &:hover{
   box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.25);
 }
+&:focus{
+        outline:none !important;
+    }
 `;
 
 const PrincipalCol = () => {
@@ -89,7 +96,7 @@ const PrincipalCol = () => {
             <p className="text-center animate__animated animate__fadeInLeft animate__delay-2s">More than just a medic for you and your family</p>
         </PresentationDesc>
           {/* /* aquí iria el card */}
-          <ButtonOrange className="text-center animate__animated animate__fadeIn animate__delay-3s"> <span> Start</span>
+          <ButtonOrange className="text-center animate__animated animate__fadeIn animate__delay-3s"><a href="/#descriptionText"><span> Start</span></a>
                 </ButtonOrange>
             {/* <CardVisual/> */}
             {/* </Parallax> */}

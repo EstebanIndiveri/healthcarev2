@@ -13,7 +13,7 @@ align-items:center;
 border:none;
 /* background: #FBA43F; */
 background: #ffcd93;
-
+outline:none;
 
 border-radius: 18px;
 color:white;

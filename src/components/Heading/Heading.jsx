@@ -39,6 +39,9 @@ transition:all 500ms ease-in-out;
 &:hover{
     box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.5);
 }
+&:focus{
+        outline:none !important;
+    }
 `;
 
 const ButtonOrange=styled.button`
@@ -46,6 +49,7 @@ display:block;
 text-align:center;
 justify-content:center;
 align-items:center;
+outline:none;
 border:none;
 background: rgba(255, 205, 147, 0.58);
 box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
@@ -56,6 +60,9 @@ padding:.8rem 1.1rem;
 transition:all 500ms ease-in-out;
     &:hover{
     box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.45);
+    }
+    &:focus{
+        outline:none !important;
     }
 `;
 const DotSpan=styled.span`

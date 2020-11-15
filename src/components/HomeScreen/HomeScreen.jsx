@@ -8,6 +8,7 @@ import CardVisual from '../CardVisual/CardVisual';
 import PrincipalCol from '../PrincipalCol';
 import ButtonPills from '../ButtonPills/ButtonPills';
 import DescriptionText from '../DescriptionText/DescriptionText';
+import CardCarousel from '../CardCarousel';
 
 const Clear=styled.div`
 @media(max-width:525px){
@@ -55,12 +56,12 @@ const HomeScreen = () => {
                         </Col>
                         
                     {/* segunda columna animate__animated animate__fadeInLeft animate__delay-3s */}
-                        <Col lg="6" style={{paddingRight:'0',paddingTop:'10px'}}>
-                            <div>
+                        <Col lg="6" md="12" sm="12" style={{paddingRight:'0',paddingTop:'10px'}}>
+                            
                                 <div css={css` background-position:center; height:70vh; background-image:url('../FamilyValueshappy.png');background-position:center;background-size:contain;background-repeat:no-repeat; @media(max-width:1000px){
                                 display:none;
                                 }`}></div>
-                            </div>
+                           
                                 <ButtonPills/>
                             {/* Description text */}
                            
@@ -72,6 +73,13 @@ const HomeScreen = () => {
                     <Row>
                         <Col id="servicios"  className="animate__animated p-0 m-0 mt-5 mb-3 pt-3 col-12 text-center clearfix">
                             <ServicesOffered/>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                        <div css={css`height:100vh`}>
+                        <CardCarousel/>
+                        </div>
                         </Col>
                     </Row>
                 </Container>
