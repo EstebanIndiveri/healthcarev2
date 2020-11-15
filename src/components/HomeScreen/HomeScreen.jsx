@@ -6,6 +6,7 @@ import ServicesOffered from '../ServicesOffered/ServicesOffered';
 import SintaxDes from '../SintaxDes';
 import CardVisual from '../CardVisual/CardVisual';
 import PrincipalCol from '../PrincipalCol';
+import ButtonPills from '../ButtonPills/ButtonPills';
 
 const Clear=styled.div`
 @media(max-width:525px){
@@ -62,7 +63,7 @@ const HomeScreen = () => {
                                 display:none;
                                 }`}></div>
                             </div>
-
+                                <ButtonPills/>
                             {/* Description text */}
 
                         </Col>

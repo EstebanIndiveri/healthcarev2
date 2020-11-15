@@ -5,7 +5,7 @@ import {css} from '@emotion/core';
 import './CardVisual.scss';
 import Row from 'reactstrap/lib/Row';
 import CircleBlue from '../../imgs/uxkit/cancelRecurso1.png';
-import Elipse from '../../imgs/uxkit/Ellipse4.png';
+import Elipse from '../../imgs/uxkit/todojunto.png';
 
 const Carta= styled.div`
 height:340px;
