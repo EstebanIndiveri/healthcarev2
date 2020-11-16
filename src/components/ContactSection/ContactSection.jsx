@@ -51,6 +51,9 @@ const ButtonSubmit=styled.button`
         background-color:#8BC9DC;
         color:white;
     }
+    @media(max-width:768px){
+        margin-bottom:3rem;
+    }
 `;
 const Div=styled.div`
 margin-right:2px;
@@ -67,13 +70,25 @@ color:#c0c0c0;
     color:#dadada;
 }
 `;
+const ContactDiv=styled.div`
+margin-top:4.5rem !important;
+`;
+
+const FirsToggle=styled.div`
+    /* margin-top:40px !important; */
+    @media(max-width:992px){
+        margin-top:3rem;
+    }
+`;
 
 const ContactSection = () => {
 
 const [isOpen, setIsOpen] = useState(false);
 
 const [isRectaOpen,setIsRectaOpen]=useState(false);
+const [isSucreOpen,setIsSucreOpen]=useState(false);
 
+const toggleSucre=()=>setIsSucreOpen(!isSucreOpen);
 const toggleRecta=()=>setIsRectaOpen(!isRectaOpen);
 const toggle = () => setIsOpen(!isOpen);
 
@@ -108,10 +123,10 @@ const toggle = () => setIsOpen(!isOpen);
         </div>
         </section>
         </Col>
-        <Col xs="12" lg="7" md="7">
+        <Col xs="12" lg="7" md="7" >
         <Title>Lugares de trabajo</Title>
-            <div className="text-center mx-auto text-decoration-none">
-                    <div className="mt-5">
+            <ContactDiv className="text-center mx-auto text-decoration-none">
+                    <FirsToggle >
                         <Div  onClick={toggle} >Centro Medico CEOM</Div>
                         <Collapse isOpen={isOpen}>
                             <Card>
@@ -128,7 +143,7 @@ const toggle = () => setIsOpen(!isOpen);
                         </Collapse>
                         
                         
-                    </div>
+                    </FirsToggle>
                    
                     <div className="mt-4">
                         <Div  onClick={toggleRecta} >Consultorios de la Recta</Div>
@@ -144,16 +159,30 @@ const toggle = () => setIsOpen(!isOpen);
                             </Card>
                         </Collapse>
                     </div>
-            </div>
+
+                    <div className="mt-4">
+                        <Div  onClick={toggleSucre} >Consultorio Privado Sucre</Div>
+                        <Collapse isOpen={isSucreOpen}>
+                            <Card>
+                            <CardBody>
+                            <p><FontAwesomeIcon icon={faMapMarkerAlt} color="#d88564" style={{fontSize:"22px"}} />
+                            &nbsp; Dirección: José Antonio Sucre, Centro, Córdoba</p> 
+                            <p><FontAwesomeIcon icon={faWhatsapp} color="#ace296" style={{fontSize:"22px"}} />
+                            &nbsp; Telefono:(351) 3516506745</p>
+                            </CardBody>
+                            </Card>
+                        </Collapse>
+                    </div>
+            </ContactDiv>
    
             <div className="mt-4" >
             <SocialLinks size={24}/>
             </div>
         </Col>
         
-                            <div className="w-100 mx-auto">
+                            {/* <div className="w-100 mx-auto">
                         <MapBox/>
-                        </div>
+                        </div> */}
         </Row>
         
      );
