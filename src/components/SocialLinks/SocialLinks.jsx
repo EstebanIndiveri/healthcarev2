@@ -8,16 +8,20 @@ import { faTwitter,
 from '@fortawesome/free-brands-svg-icons'
 import styled from '@emotion/styled'
 
-const SocialLinks = () => {
+const SocialLinks = (props) => {
 
 /* styles components */
+
+const{size}=props;
+
+let tamanio=size>20? size+'px': '20px';
 
 const Div=styled.div`
 
 display: flex;
 /* padding-left: 2.3rem; */
 justify-content:center;
-font-size:20px;
+font-size:${tamanio};
     svg{
         margin:.2rem;
         transition: transform .3s ease-in-out;

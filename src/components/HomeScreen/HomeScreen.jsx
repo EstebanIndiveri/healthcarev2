@@ -9,6 +9,7 @@ import PrincipalCol from '../PrincipalCol';
 import ButtonPills from '../ButtonPills/ButtonPills';
 import DescriptionText from '../DescriptionText/DescriptionText';
 import CardCarousel from '../CardCarousel';
+import ContactSection from '../ContactSection/ContactSection';
 
 const Clear=styled.div`
 @media(max-width:525px){
@@ -81,6 +82,13 @@ const HomeScreen = () => {
                         <CardCarousel/>
                         </div>
                         </Col>
+                    </Row>
+                    <Row>
+                    <Col id="contact" className="animate__animated p-0 m-0 mt-5 mb-3 pt-3 col-12 text-center">
+                    
+                    <ContactSection/>
+
+                    </Col>
                     </Row>
                 </Container>
             </div>

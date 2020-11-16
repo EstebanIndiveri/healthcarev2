@@ -118,7 +118,7 @@ const Heading = () => {
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                            <NavLink className="nav-link port-navbar-link" href="#">Contacts</NavLink>
+                            <NavLink className="nav-link port-navbar-link" href="#contact">Contacts</NavLink>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">

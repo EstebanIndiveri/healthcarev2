@@ -26,6 +26,7 @@
     "react-dom": "^16.13.1",
     "react-headroom": "^3.0.0",
     "react-helmet": "^6.1.0",
+    "react-map-gl": "^5.2.10",
     "react-parallax-mousemove": "^1.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
