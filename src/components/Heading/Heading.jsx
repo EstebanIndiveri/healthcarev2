@@ -100,7 +100,7 @@ const Heading = () => {
             <div>
                 <Navbar id="nave" className="navbarcomponent" color="light" light expand="md">
                     <NavbarBrand className="port-navbar-brand logo" href="/">
-                        Dr.Indiveri <DotSpan>.</DotSpan>
+                        Daniel Indiveri <DotSpan>.</DotSpan>
                     </NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                         <Collapse isOpen={isOpen} navbar>
@@ -122,7 +122,7 @@ const Heading = () => {
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                                <ButtonSignIn outline color="warning" color="secondary">Sign In</ButtonSignIn>
+                                <ButtonSignIn outline color="warning" color="secondary" onClick={()=>alert('comming soon')}>Sign In</ButtonSignIn>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
