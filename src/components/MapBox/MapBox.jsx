@@ -19,6 +19,7 @@ const MapBox = () => {
       const [selected,setSelected]=useState(null);
     
     return ( 
+      // ya esta funcionando
     // <ReactMapGL mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN} 
     // mapStyle='mapbox://styles/tefaa411/ckcznbj0k07l91imtqj94qmzm'
     //   {...viewport}
