@@ -18,6 +18,8 @@ const MapBox = () => {
       });
       const [selected,setSelected]=useState(null);
     
+      // Integrar en el dropdwon de los lugares de atención, que sea responsive
+
     return ( 
       // ya esta funcionando
     // <ReactMapGL mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN} 
