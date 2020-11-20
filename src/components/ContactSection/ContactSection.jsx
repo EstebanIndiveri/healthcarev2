@@ -24,7 +24,7 @@ const Label=styled.label`
 
 const Input=styled.input`
 border-color:#8BC9DC;
-transition:box-shadow 300ms ease-in-out;
+transition:border-color box-shadow 300ms ease-in-out;
 &:focus{
     border:none;
     box-shadow:0px 0px 5px #f8dede !important;
