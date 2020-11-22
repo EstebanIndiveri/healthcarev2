@@ -166,7 +166,7 @@ const toggle = () => setIsOpen(!isOpen);
                             <Card>
                             <CardBody>
                             <p><FontAwesomeIcon icon={faMapMarkerAlt} color="#d88564" style={{fontSize:"22px"}} />
-                            &nbsp; Dirección: José Antonio Sucre, Centro, Córdoba</p> 
+                            &nbsp; Dirección: José Antonio Sucre 5, Centro, Córdoba</p> 
                             <p><FontAwesomeIcon icon={faWhatsapp} color="#ace296" style={{fontSize:"22px"}} />
                             &nbsp; Telefono:(351) 3516506745</p>
                             </CardBody>

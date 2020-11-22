@@ -10,6 +10,7 @@ import ButtonPills from '../ButtonPills/ButtonPills';
 import DescriptionText from '../DescriptionText/DescriptionText';
 import CardCarousel from '../CardCarousel';
 import ContactSection from '../ContactSection/ContactSection';
+import Dates from '../Dates/Dates';
 
 const Clear=styled.div`
 @media(max-width:525px){
@@ -88,6 +89,11 @@ const HomeScreen = () => {
                     
                     <ContactSection/>
 
+                    </Col>
+                    </Row>
+                    <Row>
+                    <Col>
+                        <Dates/>
                     </Col>
                     </Row>
                 </Container>
