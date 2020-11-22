@@ -2,7 +2,13 @@ import React from 'react';
 
 const Dates = () => {
     return ( 
-        <div>Llamar api de dates</div>
+        <table>
+            <td>
+                <tr>
+
+                </tr>
+            </td>
+        </table>
      );
 }
  
