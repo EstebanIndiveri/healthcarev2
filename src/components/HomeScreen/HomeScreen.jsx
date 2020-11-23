@@ -11,6 +11,7 @@ import DescriptionText from '../DescriptionText/DescriptionText';
 import CardCarousel from '../CardCarousel';
 import ContactSection from '../ContactSection/ContactSection';
 import Dates from '../Dates/Dates';
+// import Dates from '../Dates/Dates.js';
 
 const Clear=styled.div`
 @media(max-width:525px){

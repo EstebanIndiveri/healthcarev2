@@ -1,13 +1,20 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-// import AppointmentPicker from "react-appointment-picker";
-import AppointmentPicker from 'appointment-picker';
+import React, { Fragment,useState,Component } from 'react';
+import styled from '@emotion/styled';
+import Table from 'reactstrap/lib/Table';
+// import AppointmentPicker from 'appointment-picker';
 
+import {AppointmentPicker} from 'react-appointment-picker'
+
+const Div=styled.div`
+height:100vh;
+
+`;
 
 class Dates extends Component{
-  state={
-    loading:false
+  state = {
+    loading: false
   };
+
   addAppointmentCallback = ({ day, number, time, id }, addCb) => {
     this.setState(
       {
@@ -23,6 +30,7 @@ class Dates extends Component{
       }
     );
   };
+
   addAppointmentCallbackContinuousCase = (
     { day, number, time, id },
     addCb,
@@ -52,6 +60,7 @@ class Dates extends Component{
       }
     );
   };
+
   removeAppointmentCallback = ({ day, number, time, id }, removeCb) => {
     this.setState(
       {
@@ -67,6 +76,7 @@ class Dates extends Component{
       }
     );
   };
+
   render() {
     const days = [
       [
@@ -151,22 +161,12 @@ class Dates extends Component{
       </div>
     );
   }
+  // render(){
+  //   return(
+  //     <div>algo</div>
+  //   )
+  // }
 }
-
-
-
-
-
-
-
-// import React, { Fragment,useState,Component } from 'react';
-// import styled from '@emotion/styled';
-// import Table from 'reactstrap/lib/Table';
-
-// const Div=styled.div`
-// height:100vh;
-
-// `;
 
 // const Dates = (props) => {
 
@@ -183,5 +183,8 @@ class Dates extends Component{
 //      );
 // }
  
-// export default Dates;
+export default Dates;
+
+
+
 
