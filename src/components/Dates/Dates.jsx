@@ -10,6 +10,8 @@ height:100vh;
 
 `;
 
+//Esto react-big-calendar?
+
 class Dates extends Component{
   state = {
     loading: false,
@@ -27,7 +29,7 @@ class Dates extends Component{
       async () => {
         await new Promise((resolve) => setTimeout(resolve, 2000));
         console.log(
-          `Added appointment ${number}, day ${day}, time ${time}, id ${id}`
+          `Added appointmentaa ${number}, day ${day}, time ${time}, id ${id}`
         );
         alert('algo');
         addCb(day, number, time, id);
