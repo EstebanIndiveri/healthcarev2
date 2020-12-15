@@ -92,11 +92,7 @@ const HomeScreen = () => {
 
                     </Col>
                     </Row>
-                    <Row>
-                    <Col>
-                        <Dates/>
-                    </Col>
-                    </Row>
+                  
                 </Container>
             </div>
         </Fragment>

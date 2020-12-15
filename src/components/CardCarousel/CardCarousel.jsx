@@ -10,7 +10,7 @@ import {faStar} from '@fortawesome/free-solid-svg-icons'
 
 
 var CARD_STYLE={
-    width: '70vw',
+    width: '50vw',
     paddingBottom:'0px',
     textAlign: 'center',
     fontSize: '12px',
