@@ -122,7 +122,7 @@ const Heading = () => {
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                                <ButtonSignIn outline color="warning" color="secondary" onClick={()=>alert('comming soon')}>Sign In</ButtonSignIn>
+                                <ButtonSignIn outline color="warning" color="secondary" onClick={()=>alert('coming soon')}>Sign In</ButtonSignIn>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
