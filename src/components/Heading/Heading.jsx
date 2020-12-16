@@ -98,7 +98,7 @@ const Heading = () => {
             // `}
         >
             <div>
-                <Navbar id="nave" className="navbarcomponent" color="light" light expand="md">
+                <Navbar id="nave" className="navbarcomponent responsive1" color="light" light expand="md">
                     <NavbarBrand className="port-navbar-brand logo" href="/">
                         Daniel Indiveri <DotSpan>.</DotSpan>
                     </NavbarBrand>

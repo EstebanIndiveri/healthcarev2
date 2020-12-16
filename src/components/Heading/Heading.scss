@@ -50,6 +50,11 @@ header div #nave{
   justify-content: space-around !important;
   display: flex !important;
   align-items: center !important;
+  @media (max-width: 768px){
+    display: flex!important;
+    flex-basis: auto !important;
+    justify-content: space-between !important;
+  }
 
 }
 .ml-auto.navbar-nav{
@@ -127,4 +132,28 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     transform: rotate(90deg);
     box-shadow: 0px 0px 4px #FBA43F;
   }
+}
+.responsive1{
+  @media(max-width: 860px){
+    ul{
+      li{
+        button{
+          display:none;
+        }
+      }
+    }
+  }
+}
+#nave{
+   .navbar-collapse {
+    @media (min-width: 860px){
+        display: flex!important;
+        flex-basis: auto !important;
+    }
+  //   @media (min-width: 768px){
+  //     display: flex!important;
+  //     flex-basis: auto !important;
+  //     justify-content: space-between !important;
+  // }
+    }
 }

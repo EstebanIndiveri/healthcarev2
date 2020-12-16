@@ -20,6 +20,10 @@ const PresentationDesc=styled.div`
         width:50%;
         margin:0 auto;
         padding-bottom:.4rem;
+        @media(max-width:440px){
+            width:100%;
+            font-size:.8rem;
+        }
     }
 `;
 
@@ -28,20 +32,30 @@ const Description=styled.div`
 font-weight:700;
 line-height:1.1;
 padding-bottom:0px;
-h1{
-    font-size:6.07rem;
-    padding:0;
-    margin:0;
-    @media(max-width:1200px){
-        font-size:4.3rem;
-    }
-}
+    h1{
+        font-size:6.07rem;
+        padding:0;
+        margin:0;
+            @media(max-width:1200px){
+                font-size:4.3rem;
+            }
+            @media(max-width:510px){
+                font-size:3rem;
+            }
+            @media(max-width:410px){
+                font-size:2.3rem;
+            }
+            svg{
+                    font-size:15px !important;                    
+            }
+        }
 @media(max-width:1000px){
         font-size:2.3rem;
         text-align:justify;
         padding-bottom:2rem;
       
     }
+    
 `;
 
 const BarraTitle=styled.div`
@@ -82,6 +96,24 @@ text-decoration:none;
 `;
 
 const PrincipalCol = () => {
+
+    const scroll = (component) => {
+        if(component){
+            const section = document.querySelector( component );
+            if(section){
+                section.scrollIntoView( { behavior: 'smooth' } );
+
+
+                const ready=document.querySelector(component);
+                ready.classList.add('animate__fadeIn','animate__slower');
+
+                setTimeout(() => {
+                    ready.classList.remove( 'animate__fadeIn','animate__slower')
+                }, 3000);
+            }
+        };
+      };
+      
     return ( 
         <Fragment>
         {/* <Parallax className="custom-class" y={[-25, 25]} tagOuter="figure"> */}
@@ -96,7 +128,7 @@ const PrincipalCol = () => {
             <p className="text-center animate__animated animate__fadeInLeft animate__delay-2s">More than just a medic for you and your family</p>
         </PresentationDesc>
           {/* /* aquí iria el card */}
-          <ButtonOrange className="text-center animate__animated animate__fadeIn animate__delay-3s"><a href="/#descriptionText"><span> Start</span></a>
+          <ButtonOrange className="text-center animate__animated animate__fadeIn animate__delay-3s" onClick={()=>scroll('#descriptionText')} ><span> Start</span>
                 </ButtonOrange>
             {/* <CardVisual/> */}
             {/* </Parallax> */}

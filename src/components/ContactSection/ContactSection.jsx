@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import SocialLinks from '../SocialLinks/SocialLinks';
 import { Collapse, Button, CardBody, Card,Col,Row } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faMapMarkerAlt,faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faMapMarkerAlt,faEnvelope,faClock} from '@fortawesome/free-solid-svg-icons'
 import {faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 import MapBox from '../MapBox';
 
