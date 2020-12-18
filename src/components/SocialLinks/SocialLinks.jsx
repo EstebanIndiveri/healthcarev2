@@ -42,10 +42,8 @@ transition:color .3s ease-in-out;
 `;
     return ( 
         <Div>
-            <A href="https://wa.me/543512694707?text=Buenos%20días%20necesito%20sacar%20un%20turno%20para%20mi%20hijo" target="_blank"><FontAwesomeIcon icon={faWhatsapp} /></A>
-            {/* <A href="#!"><FontAwesomeIcon icon={faFacebookSquare}/></A> */}
+            <A href="https://wa.me/543516506745?text=Buenos%20días%20necesito%20sacar%20un%20turno%20para%20mi%20hijo" target="_blank"><FontAwesomeIcon icon={faWhatsapp} /></A>
             <A href="#!"><FontAwesomeIcon icon={faInstagram}/></A>
-            {/* <A href="#!"><FontAwesomeIcon icon={faTwitter} /></A> */}
             <A href="#!"><FontAwesomeIcon icon={faLinkedinIn} /></A>
         </Div>
      );
